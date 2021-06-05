@@ -5,21 +5,22 @@ public class Main {
     public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
+        MyGraph<String> graph = new MyGraph<>();
 
-        int size = sc.nextInt();
-        int[] mas = new int[size];
+        graph.addEdge("Almaty", "Astana");
+        graph.addEdge("Almaty", "Shymkent");
+        graph.addEdge("Shymkent", "Astana");
+        graph.addEdge("Shymkent", "Kyzylorda");
+        graph.addEdge("Astana", "Kostanay");
 
-        for(int i = 0; i < size; i++){
-            mas[i] = sc.nextInt();
+        for (String v : graph.adj()){
+            System.out.println(v);
         }
 
-        Functions fun = new Functions();
-        // код работает с условием, что массив отсортированный
-        System.out.println(fun.firstIndexOf(mas, size, 8));
-        System.out.println(fun.secondIndexOf(mas, size, 8));
-        System.out.println(fun.lastIndexOf(mas, size, 12));
-        System.out.println(fun.has(mas, size, 23));
-        System.out.println(fun.hasTriple(mas, size, 67));
+        System.out.println(graph.getEdgesCount());
+        System.out.println(graph.getVerticesCount());
+        System.out.println(graph.hasEdge("Almaty", "Astana"));
+        System.out.println(graph.hasVertex("Atyrau"));
 
 
 

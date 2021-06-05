@@ -113,7 +113,7 @@ public class Main{
 
 
     // Implementation of HashTable
-    /*
+
     public static void main(String[] args) {
 
         MyHash<String, Integer> map = new MyHash<>();
@@ -128,7 +128,7 @@ public class Main{
         System.out.println(map.contains((3)));
         System.out.println(map.getKey(3));
     }
-    */
+
 
 
 
